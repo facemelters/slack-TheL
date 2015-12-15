@@ -37,7 +37,7 @@ def thel():
         return Response(('Sorry I did\'t get you. Would you please simplify your query?'
                         '%s is not valid input.' % text),
                         content_type='text\plain; charset=utf-8')
-    resp_qs = ['Hi Top Answer for "%s"\n' % text]
+    resp_qs = ['Hi! Here is the top answer for "%s"\n' % text]
     resp_qs.extend(next(res.results).text)
 
     return Response(''.join(resp_qs),
